@@ -5,21 +5,20 @@
 
 // use the main method only for calling the function where your logic lies. :-)
 
+```java
 public class ThirdSort {
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public String ThirdGreatest(String[]strArr){
-        String sortedString = "";
-        boolean finalSort =  true;
-        while(finalSort){
+        String x = "";
+        boolean Sort =  true;
+        while(Sort){
             for(int i = 0; i < strArr.length-1; i++){
                 if(strArr[i].length() < strArr[i+1].length()){
-                    sortedString = strArr[i];
+                   x = strArr[i];
                     strArr[i] = strArr[i+1];
-                    strArr[i+1]= sortedString;
-                    finalSort = false;
+                    strArr[i+1]= x;
+                    Sort = false;
                 };
             }
         }
@@ -29,5 +28,4 @@ public class ThirdSort {
         String[] myArr={"hello", "world", "before", "all"};
         System.out.println(ThirdGreatest(myArr));
     }
-
 }
